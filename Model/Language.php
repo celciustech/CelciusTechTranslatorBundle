@@ -17,7 +17,7 @@ class Language
      *
      * @Assert\NotBlank()
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
@@ -26,7 +26,7 @@ class Language
      *
      * @Assert\NotBlank()
      */
-    private $locale;
+    protected $locale;
 
     /**
      * @var integer
@@ -35,7 +35,7 @@ class Language
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    protected $id;
 
 
     /**
