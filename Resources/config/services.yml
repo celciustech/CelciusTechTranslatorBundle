@@ -1,0 +1,6 @@
+services:
+    ct.form.type.translatable_field:
+        class: CelciusTech\TranslatorBundle\Form\Type\TranslatedFieldType
+        arguments: [ @service_container ]
+        tags:
+            - { name: form.type, alias: translatable_field }

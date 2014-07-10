@@ -1,0 +1,22 @@
+{% block translatable_field_widget %}
+    {% spaceless %}
+        <div>
+            <ul class="nav nav-tabs" {{ block('widget_container_attributes') }} role="tablist">
+            {% for childId, child in form %}
+                <li>
+                    <a href="#{{ childId|replace({':': '-'}) }}" role="tab" data-toggle="tab">
+                        {{ label }}
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+            <div class="tab-content">
+            {% for childId, child in form %}
+                <div class="tab-pane" id="{{ childId|replace({':': '-'}) }}">
+                    {{ form_widget(child) }}
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    {% endspaceless %}
+{% endblock %}

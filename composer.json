@@ -1,0 +1,33 @@
+{
+    "name" : "celciustech/translator-bundle",
+    "description" : "Translator bundle used in CelciusTech's projects",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Hendra",
+        "email" : "hendra.wijaya@celciustech.net"
+    }],
+    "keywords" : [
+        "TranslatorBundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+        "php": ">=5.3.3",
+        "symfony/symfony": "~2.3",
+        "gedmo/doctrine-extensions": "2.3.*"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "CelciusTech\\TranslatorBundle" : ""
+        }
+    },
+    "target-dir" : "CelciusTech/TranslatorBundle",
+    "repositories" : [{
+    }],
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "v1.0.0"
+        }
+    }
+}
