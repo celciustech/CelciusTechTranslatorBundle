@@ -29,7 +29,7 @@ class TranslatedFieldType extends AbstractType
             'remove_empty' => true, //Personal Translations without content are removed
             'csrf_protection' => false, 
             'personal_translation' => false, //Personal Translation class
-            'locales' => $locales, //the locales you wish to edit
+            'locales' => false, //the locales you wish to edit
             'required_locale' => array($this->container->getParameter('locale')), //the required locales cannot be blank
             'field' => false,
             'widget' => "text", //change this to another widget like 'texarea' if needed
