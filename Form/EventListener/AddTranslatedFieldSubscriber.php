@@ -27,7 +27,7 @@ class AddTranslatedFieldSubscriber implements EventSubscriberInterface
         }
         $em = $this->container->get('doctrine')->getManager();
         foreach ($em->getRepository($this->options['language_repository'])->findAll() as $language) {
-            $locales[] = $language->getCountry()->getLocale();
+            $locales[] = $language->getLocale();
         }
         $this->options['locales'] = $locales;
     }
