@@ -37,3 +37,8 @@ class Language extends Base
     // ...
 }
 ```
+
+Add your language repository in app/config/parameters.yml.dist
+```
+language_repository: AcmeHelloBundle:Language
+```

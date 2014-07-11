@@ -22,11 +22,11 @@ class AddTranslatedFieldSubscriber implements EventSubscriberInterface
         $this->options = $options;
         $this->container = $container;
 
-        if (!$this->options['language_repository']) {
+        if (!$this->container->getParameter('language_repository')) {
             throw new \Exception('Please provide language_repository options to translatable_field.');
         }
         $em = $this->container->get('doctrine')->getManager();
-        foreach ($em->getRepository($this->options['language_repository'])->findAll() as $language) {
+        foreach ($em->getRepository($this->container->getParameter('language_repository'))->findAll() as $language) {
             $locales[] = $language->getLocale();
         }
         $this->options['locales'] = $locales;
