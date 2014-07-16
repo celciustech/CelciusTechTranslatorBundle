@@ -5,7 +5,7 @@
             {% for childId, child in form %}
                 <li>
                     <a href="#{{ childId|replace({':': '-'}) }}" role="tab" data-toggle="tab">
-                        {{ label }}
+                        {{ child.vars.label|capitalize }}
                     </a>
                 </li>
             {% endfor %}
